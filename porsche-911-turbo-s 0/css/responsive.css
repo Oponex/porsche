@@ -1,0 +1,41 @@
+/* =====================================================================
+   RESPONSIVE (responsive.css) — mobile-first breakpoints
+   Base styles target small screens; these enhance upward.
+   ===================================================================== */
+
+/* --- >= 600px : two-up stats & specs --- */
+@media (min-width: 600px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-xl) var(--space-lg); }
+  .specs__table { grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- >= 900px : desktop navigation + multi-column layouts --- */
+@media (min-width: 900px) {
+  .nav__menu { display: flex; }
+  .nav__cta { display: inline-flex; }
+  .nav__burger { display: none; }
+
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .tech__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Feature: image + text side-by-side, alternating sides */
+  .feature { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-2xl); }
+  .feature--right { direction: rtl; }
+  .feature--right > * { direction: ltr; }
+
+  .gallery__item--wide { grid-column: span 2; }
+}
+
+/* --- >= 1200px : larger gallery rhythm & tech 4-up --- */
+@media (min-width: 1200px) {
+  .tech__grid { grid-template-columns: repeat(4, 1fr); }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery__item--wide { grid-column: span 2; }
+}
+
+/* --- Parallax disabled on touch (background-attachment: fixed is janky on mobile) --- */
+@media (max-width: 900px) {
+  .experience__media { background-attachment: scroll; }
+}
+
