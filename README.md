@@ -79,3 +79,35 @@ Modern luxury brands (Apple, Porsche, Tesla) use rounded corners to signal appro
 ---
 
 ## Project Structure
+
+```bash
+Porsche-Premium-Website/
+│
+├── index.html          # Main HTML file containing the full page structure
+├── style.css           # Main styling for layout, typography, cards, buttons, and sections
+├── responsive.css      # Media queries for tablet and mobile responsiveness
+├── README.md           # Project documentation
+│
+├── assets/
+│   ├── images/         # Local image assets if used in the project
+│   └── icons/          # Icons or small UI graphics if needed
+│
+└── preview/
+    └── screenshot.png  # Preview image for GitHub or documentation
+
+
+If your project uses only direct image URLs and no local assets, you can use this simpler version:
+
+```markdown
+## Project Structure
+
+```bash
+Porsche-Premium-Website/
+│
+├── index.html          # Main page structure
+├── style.css           # Main website styles
+├── responsive.css      # Responsive layout styles
+├── README.md           # Project information and documentation
+└── preview.png         # Project preview image
+
+[https](https://)oponex-porsche-web-project.netlify.app
